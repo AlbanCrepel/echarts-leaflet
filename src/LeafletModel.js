@@ -1,4 +1,4 @@
-import echarts from 'echarts/lib/echarts';
+import * as echarts from 'echarts/lib/echarts.js'
 
 /**
  * compare if two arrays of length 2 are equal

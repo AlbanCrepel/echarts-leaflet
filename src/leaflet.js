@@ -2,7 +2,7 @@
  * Leftlet component extension
  */
 
-import echarts from 'echarts/lib/echarts';
+import * as echarts from 'echarts/lib/echarts.js'
 import LeafletCoordSys from './LeafletCoordSys';
 
 import './LeafletModel';
@@ -29,3 +29,5 @@ echarts.registerAction(
 );
 
 export const version = '1.0.0';
+
+export echarts

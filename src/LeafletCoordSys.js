@@ -1,4 +1,5 @@
-import { util, graphic, matrix } from 'echarts/lib/echarts';
+import * as echarts from 'echarts/lib/echarts.js'
+import { graphic, matrix } from 'echarts/lib/echarts';
 import L from 'leaflet/src/Leaflet';
 /**
  * constructor for Leaflet CoordSys
@@ -47,12 +48,12 @@ LeafletCoordSys.prototype.pointToData = function(pt) {
   return [coord.lng, coord.lat];
 };
 
-LeafletCoordSys.prototype.convertToPixel = util.curry(
+LeafletCoordSys.prototype.convertToPixel = echarts.util.curry(
   doConvert,
   'dataToPoint'
 );
 
-LeafletCoordSys.prototype.convertFromPixel = util.curry(
+LeafletCoordSys.prototype.convertFromPixel = echarts.util.curry(
   doConvert,
   'pointToData'
 );
